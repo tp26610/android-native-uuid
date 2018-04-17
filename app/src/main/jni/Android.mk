@@ -61,7 +61,7 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := $(libext2_uuid_src_files)
 LOCAL_C_INCLUDES := $(libext2_uuid_c_includes)
 LOCAL_CFLAGS := $(libext2_uuid_cflags)
-LOCAL_STATIC_LIBRARIES := libc
+#LOCAL_STATIC_LIBRARIES := libc
 LOCAL_MODULE := libext2_uuid_static
 LOCAL_MODULE_TAGS := optional
 LOCAL_PRELINK_MODULE := false
@@ -71,5 +71,5 @@ include $(BUILD_STATIC_LIBRARY)
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := jni_main.cpp
 LOCAL_MODULE := jni-main
-LOCAL_STATIC_LIBRARY := libext2_uuid_static
-include $(BUILD_STATIC_LIBRARY)
+LOCAL_STATIC_LIBRARIES := libext2_uuid_static
+include $(BUILD_SHARED_LIBRARY)
