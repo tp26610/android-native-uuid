@@ -6,7 +6,7 @@
 // generate UUID example.
 int main(int argc, char **argv)
 {
-    uuid_t uuid;
+    uuid_t uuid = {0};
     char str[36];
 
     uuid_generate(uuid);
@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 extern "C" {
 
 JNIEXPORT jstring JNICALL Java_jni_NativeUUID_generateUUID(JNIEnv *env, jobject jobj) {
-    uuid_t uuid;
+    uuid_t uuid = {0};
     char str[36];
 
     uuid_generate(uuid);
