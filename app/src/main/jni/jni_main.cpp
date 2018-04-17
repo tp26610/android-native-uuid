@@ -1,7 +1,7 @@
 #include <jni.h>
 
 #include <stdio.h>
-#include <uuid/uuid.h>
+#include "uuid/uuid.h"
 
 // generate UUID example.
 int main(int argc, char **argv)
